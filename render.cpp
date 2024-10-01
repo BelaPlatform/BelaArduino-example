@@ -20,6 +20,7 @@ bool setup(BelaContext* context, void* userData)
 		return false;
 	unsigned int wsPort = 5557;
 	wm.getGui().setup("/libraries/Watcher/sketch-watcher-example.js", wsPort);
+	wm.setup(context->audioSampleRate);
 	printf("sketch-watcher.js GUI at bela.local/gui?wsPort=%u\n", wsPort);
 	return true;
 }

@@ -16,8 +16,7 @@ bool setup(BelaContext* context, void* userData)
 	settings.floatHook = BelaArduino_floatHook;
 	if(!BelaLibpd_setup(context, userData, settings))
 		return false;
-	BelaArduinoSettings arduinoSettings;
-	arduinoSettings.controlPanelAudio = false;
+	BelaArduinoSettings arduinoSettings {};
 	if(!BelaArduino_setup(context, userData, arduinoSettings))
 		return false;
 	unsigned int wsPort = 5557;

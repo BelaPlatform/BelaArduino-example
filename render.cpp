@@ -2,9 +2,8 @@
 #include <libraries/BelaArduino/BelaArduino.h>
 #include <libraries/Watcher/Watcher.h>
 
-Gui wmGui;
-WatcherManager wm(wmGui);
-Watcher<float> myvar("myvar"); // this is the user-define watcher
+WatcherManager& wm = *Bela_getDefaultWatcherManager();
+Watcher<float> myvar("myvar"); // this is the user-defined watcher
 
 bool setup(BelaContext* context, void* userData)
 {

@@ -21,7 +21,7 @@ void pdReceiveMsg(const char* symbol, float* data, size_t length)
 
 void setup()
 {
-	Serial.println("Arduino setup\n");
+	Serial.println("Arduino setup");
 	// Set up the digital pins
 	pinMode(0, OUTPUT);
 	pinMode(1, OUTPUT);

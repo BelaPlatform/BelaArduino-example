@@ -3,7 +3,7 @@
 #include <libraries/Watcher/Watcher.h>
 
 WatcherManager& wm = *Bela_getDefaultWatcherManager();
-Watcher<float> myvar = ("myvar", 0.5); // this is the user-defined watcher
+Watcher<float> myvar = {"myvar", 0.5}; // this is the user-defined watcher
 
 bool setup(BelaContext* context, void* userData)
 {
